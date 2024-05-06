@@ -1,36 +1,106 @@
 @font-face {
-    font-family: MiFuente;
-    src: url('fonts/Neue Montreal/NeueMontreal-Bold.otf') format('truetype');
-  }
-  
-  *
-  {
-    margin: 0;
-    padding: 0;
+  font-family: MiFuente;
+  src: url("fonts/Neue Montreal/NeueMontreal-Bold.otf") format("truetype");
+}
+@keyframes octocat-wave {
+
+  0%,
+  100% {
+    transform: rotate(0)
   }
 
-  body {
-    font-family: MiFuente, sans-serif;
-    background-color: rgb(218, 248, 237);
+  20%,
+  60% {
+    transform: rotate(-25deg)
   }
 
-.title
-  {
-    font-size: 25vh;
+  40%,
+  80% {
+    transform: rotate(10deg)
+  }
+}
+
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation: none
   }
 
-  .titulares
-  {
-    margin-left: 15%;
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
   }
+}
 
-  .metadatos
-  {
-    margin-top: 2%;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
 
-  .imgs
-  {
-    margin-top: 50%;
-    filter: contrast(0.75);
-  }
+body {
+  font-family: MiFuente, sans-serif;
+  background-color: transparent;
+  overflow: hidden;
+  /* background-color: rgb(218, 248, 237); */
+}
+
+
+.imagen3D
+{
+  position: absolute;
+  background: rgb(141,118,154);
+  background: linear-gradient(0deg, rgba(141,118,154,1) 0%, rgba(179,163,186,1) 77%);
+}
+.title {
+  font-size: 20vmin;
+  text-align: center;
+  transition: scale 0.8s;
+  margin-top: -2%;
+}
+
+.title:hover
+{
+  scale: 1.06;
+}
+
+.subtitle {
+  width: 80%;
+  font-size: 3vmin;
+  transition: scale 0.4s;
+  margin-top: 10%;
+  background-color: var(--bs-gray-900);
+  color:aliceblue
+}
+
+.subtitle:hover
+{
+  scale: 1.2;
+}
+.titulares {
+  margin-top: -5%;
+  width: 80%;
+  margin-left: 15%;
+}
+
+.titulares2 {
+  margin-top: 0%;
+  width: 80%;
+  margin-left: 15%;
+}
+
+.metadatos {
+  margin-top: 3%;
+}
+
+.imgs {
+  width: 200px;
+  height: 200px;
+  margin-top: 0%;
+  fill: aliceblue;
+}
+
+.filter-white {
+  filter: invert(84%) sepia(0%) saturate(7500%) hue-rotate(169deg) brightness(117%) contrast(101%);
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out
+}
