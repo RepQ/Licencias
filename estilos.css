@@ -1,0 +1,36 @@
+@font-face {
+    font-family: MiFuente;
+    src: url('fonts/Neue Montreal/NeueMontreal-Bold.otf') format('truetype');
+  }
+  
+  *
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: MiFuente, sans-serif;
+    background-color: rgb(218, 248, 237);
+  }
+
+.title
+  {
+    font-size: 25vh;
+  }
+
+  .titulares
+  {
+    margin-left: 15%;
+  }
+
+  .metadatos
+  {
+    margin-top: 2%;
+  }
+
+  .imgs
+  {
+    margin-top: 50%;
+    filter: contrast(0.75);
+  }
