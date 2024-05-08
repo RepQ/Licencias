@@ -19,6 +19,18 @@
     transform: rotate(10deg)
   }
 }
+@keyframes pulse {
+  0% {
+    transform: scale(1) rotate(0deg); /* Estado inicial */
+  }
+  50% {
+    transform: scale(1.05) rotate(180deg); /* Escala aumentada y rotación a la mitad */
+  }
+  100% {
+    transform: scale(1) rotate(0deg); /* Vuelta al estado inicial */
+  }
+}
+
 
 @media (max-width:500px) {
   .github-corner:hover .octo-arm {
@@ -42,7 +54,53 @@ body {
   /* background-color: rgb(218, 248, 237); */
 }
 
+h1{
+  margin-left: 8%;
+  margin-top: 15%;
+  position: absolute;
+  font-size: 10vmin;
+  text-align: center;
+  transition: scale 0.8s;
+}
+h1:hover{
+  scale: 1.1;
 
+}
+
+
+.text
+{
+  margin-top: 10%;
+  font-size: 4vmin;
+  width: 100%;
+}
+
+.section2
+{
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-right: auto;
+  margin-bottom: 15%;
+}
+.section3
+{
+  margin-top: 25%;
+  margin-left: 8%;
+  margin-bottom: 20%;
+}
+.section4
+{
+  margin-top: 10%;
+  margin-left: -10%;
+  margin-right: -10%;
+}
+
+.section5
+{
+  margin-top: 100%;
+  margin-left: 8%;
+  margin-right: auto;
+}
 .imagen3D
 {
   position: absolute;
@@ -52,20 +110,13 @@ body {
 .title {
   font-size: 20vmin;
   text-align: center;
-  transition: scale 0.8s;
   margin-top: -2%;
-}
-
-.title:hover
-{
-  scale: 1.06;
 }
 
 .subtitle {
   width: 80%;
   font-size: 3vmin;
   transition: scale 0.4s;
-  margin-top: 10%;
   background-color: var(--bs-gray-900);
   color:aliceblue
 }
@@ -75,7 +126,8 @@ body {
   scale: 1.2;
 }
 .titulares {
-  margin-top: -5%;
+  position: relative;
+  margin-top: 10%;
   width: 80%;
   margin-left: 15%;
 }
@@ -91,16 +143,87 @@ body {
 }
 
 .imgs {
-  width: 200px;
-  height: 200px;
-  margin-top: 0%;
+  width: 100vh;
+  height: 100vh;
+  position: absolute;
+  margin-top: 10%;
   fill: aliceblue;
+  animation: pulse 5s infinite;
+  transition: scale 0.8s;
+  transform-origin: center;
+}
+
+.imgs:nth-child(odd)
+{
+  animation-delay: 2s;
+}
+
+.imgs:hover
+{
+  scale: 1.2;
+}
+
+.imgs2 {
+  width: 80vh;
+  height: 70vh;
+  position: absolute;
+  margin-top: 0%;
+  margin-right: 50%;
+  fill: aliceblue;
+  transition: transform 0.5s;
+  transform-origin: center;
+}
+/* .rotate
+{
+  transition: transform 3s;
+}
+
+.rotate:hover
+{
+  transform:rotate(360deg);
+
+} */
+.imgs2:hover
+{
+  transition-delay: 0.5s;
+}
+
+.imgs3 {
+  width: 80vh;
+  height: 10vh;
+  position: relative;
+  margin-top: 0vh;
+  margin-left: 20%;
+  transition: transform 1s;
+  transform-origin: center;
+}
+
+.imgs3 h1
+{
+  font-size: 30vh;
+  margin: 0;
+}
+
+.imgs4 {
+  position: relative;
+  transition: transform 1s;
+  margin-right: auto;
+}
+
+.imgs4 h1
+{
+  font-size: 5vh;
+  text-align: center;
 }
 
 .filter-white {
   filter: invert(84%) sepia(0%) saturate(7500%) hue-rotate(169deg) brightness(117%) contrast(101%);
 }
 
+.filter-black
+{
+  filter: invert(9%) sepia(8%) saturate(1227%) hue-rotate(169deg) brightness(93%) contrast(86%);
+}
 .github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out
 }

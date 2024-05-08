@@ -6,6 +6,7 @@ const scroll = new LocomotiveScroll({
     smooth: true,
 });
 
+
 const objectsDistance = 200;
 const objectGroup = new THREE.Group();
 const canvas = document.querySelector('canvas.imagen3D')
@@ -29,9 +30,10 @@ var skelet = new THREE.Object3D();
 var comet = new THREE.Object3D();
 
 scene.add(particle);
-scene.add(skelet);
 scene.add(comet);
-objectGroup.add(skelet)
+
+objectGroup.add(particle);
+objectGroup.add(comet);
 var material = new THREE.MeshToonMaterial({
 	color: 0xffeded
 });
@@ -77,7 +79,6 @@ function animate() {
     const elapsedTime = clock.getElapsedTime()
     const deltaTime = elapsedTime - previousTime
     previousTime = elapsedTime
-	camera.position.y = - scrollY / window.innerHeight * objectsDistance;
 
     const parallaxX = cursor.x
     const parallaxY = - cursor.y
